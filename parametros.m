@@ -18,7 +18,7 @@ close all;
 
 %% Parametros variaveis
 % Passo de integracao
-passo_integracao = 1e-4;
+passo_integracao = 1e-6;
 t_sim = 30;
 % Condicoes iniciais
 x1_0 = 0;
@@ -27,6 +27,7 @@ x3_0 = 0;
 x4_0 = 0;
 % Atrito
 Kat = .3;
-%% Executa Simulacao
+
+% Executa Simulacao
 open_system('projeto_2016/estados')
 simOut = sim('projeto_2016');
