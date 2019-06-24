@@ -30,4 +30,5 @@ Kat = .3;
 
 % Executa Simulacao
 open_system('projeto_2016/estados')
+open_system('projeto_2016/saida_ger')
 simOut = sim('projeto_2016');
