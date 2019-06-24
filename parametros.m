@@ -18,7 +18,7 @@ close all;
 
 %% Parametros variaveis
 % Passo de integracao
-passo_integracao = 1e-3;
+passo_integracao = 1e-1;
 t_sim = 30;
 % Condicoes iniciais
 x1_0 = 0;
