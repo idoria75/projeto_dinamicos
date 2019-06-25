@@ -28,6 +28,8 @@ x4_0 = 0;
 % Atrito
 Kat = .3;
 
+limite_quadrado = 3;
+
 % Executa Simulacao
 open_system('projeto_2016/estados')
 open_system('projeto_2016/saida_ger')
