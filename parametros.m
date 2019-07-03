@@ -43,7 +43,7 @@ y = [0.499238938966419	,0.496961548004645	,0.493185159449869	,
 
 %% Parametros variaveis
 % Passo de integracao
-passo_integracao = 1e-2;
+passo_integracao = 1e-3;
 t_sim = 30;
 % Condicoes iniciais
 x1_0 = 0;
@@ -57,5 +57,4 @@ limite_quadrado = 3;
 
 % Executa Simulacao
 open_system('projeto_2016/estados')
-open_system('projeto_2016/saida_ger')
 simOut = sim('projeto_2016');
