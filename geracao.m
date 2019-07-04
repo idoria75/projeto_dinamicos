@@ -63,7 +63,7 @@ end
 
 tempo_d = t_sim;
 intervalo = tempo_d/total_pontos;
-lista_tempos_quadrado = 0:intervalo:tempo_d
+lista_tempos_quadrado = 0:intervalo:tempo_d;
 
 % lista_quad_x
 % lista_quad_y
@@ -77,7 +77,7 @@ num_pontos = 180;
 
 tempo_d = t_sim;
 intervalo = tempo_d/num_pontos;
-lista_tempos = 0:intervalo:tempo_d
+lista_tempos = 0:intervalo:tempo_d;
 
 theta_passo = circulo/num_pontos;
 
