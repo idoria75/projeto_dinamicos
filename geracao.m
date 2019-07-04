@@ -84,7 +84,7 @@ L1 = 0.6;
 L2 = 0.6;
 
 circulo = 360;
-num_pontos = 12;
+num_pontos = 72;
 
 tempo_d = 10;
 intervalo = 10/num_pontos;

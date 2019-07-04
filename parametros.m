@@ -44,7 +44,7 @@ close all;
 %% Parametros variaveis
 % Passo de integracao
 passo_integracao = 1e-4;
-t_sim = 30;
+t_sim = 15;
 % Condicoes iniciais
 x1_0 = 0;
 x2_0 = 0;
@@ -55,15 +55,15 @@ Kat = .3;
 
 limite_quadrado = 3;
 
-%% Geracao de trajetoria
+%% Geracao de trajetoria circular
 
 L1 = 0.6;
 L2 = 0.6;
 
 circulo = 360;
-num_pontos = 120;
+num_pontos = 10;
 
-tempo_d = 30;
+tempo_d = t_sim;
 intervalo = tempo_d/num_pontos;
 lista_tempos = 0:intervalo:tempo_d
 
