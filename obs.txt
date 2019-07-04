@@ -1,0 +1,5 @@
+Observacoes:
+*Diminuir tempo de integracao do XY Graph. Este bloco demora demais!! (Usando 1e-2 sem diferenças significativas no resultado)
+*Passo de integração da simulação faz diferença. Tem que ser pelo menos 1e-3.
+*Geração de referências funciona pra quantos lados quisermos no círculo.
+*DÁ ATÉ PRA FAZER UM QUADRADO!!!!
