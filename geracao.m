@@ -9,8 +9,10 @@ passo_integracao = 1e-4;
 t_sim = 10;
 % Condicoes iniciais
 x1_0 = 0;
+% x1_0 = -0.5857;
 x2_0 = 0;
 x3_0 = 0;
+% x3_0 = 1.1714
 x4_0 = 0;
 % Atrito
 Kat = .3;
@@ -98,18 +100,21 @@ end
 
 lista_theta1 = [];
 lista_theta2 = [];
+
+% Confere Cinematica Inversa
 for i = 1:num_pontos+1
     xd = lista_posx(i);
     yd = lista_posy(i);
 
     aux1 = (xd^2+yd^2-L1^2-L2^2)/(2*L1*L2);
-    theta2 = acosd(aux1);
+    theta2 = acos(aux1);
     lista_theta2(i) = theta2;
     aux2_num = yd*(L1+L2*cosd(theta2))-xd*L2*sind(theta2);
     aux2_den = xd*(L1+L2*cosd(theta2))+yd*L2*sind(theta2);
     aux2 = aux2_num/aux2_den;
-    % theta1 = atan2d(L2*cosd(theta2),L2*sind(theta2))
-    theta1 = atan2d(aux2_num, aux2_den);
+%     theta1 = atan2d(L2*cosd(theta2),L2*sind(theta2))
+%     theta1 = atan2(aux2_num, aux2_den);
+    theta1 = atan(aux2);
     lista_theta1(i) = theta1;
 
     px1 = L1*cosd(theta1);
@@ -119,7 +124,6 @@ for i = 1:num_pontos+1
     r = sqrt(px2^2+py2^2);
     L1_calc = sqrt(px1^2+py1^2);
     L2_calc = sqrt((px2-px1)^2+(py2-py1)^2);
-    
 %     plot([0 px1],[0 py1]);
 %     plot([px1 px2],[py1 py2]);
 end
@@ -129,3 +133,13 @@ end
 %% Executa Simulacao
 open_system('projeto_2016/compara_in_out')
 simOut = sim('projeto_2016');
+
+%% Gera grafico resultados
+close all; figure; hold on;
+title('Comportamento do sistema');
+xlabel('Tempo (s)');
+ylabel('Posicao (m)');
+plot(compara_in_out(:,1),compara_in_out(:,2),'');
+plot(compara_in_out(:,1),compara_in_out(:,3),'');
+plot(compara_in_out(:,1),compara_in_out(:,4),'--');
+plot(compara_in_out(:,1),compara_in_out(:,5),'--');
