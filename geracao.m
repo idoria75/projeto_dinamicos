@@ -86,9 +86,9 @@ lista_tempos = 0:intervalo:tempo_d;
 
 theta_passo = circulo/num_pontos;
 
-lista_thetas = [-180:theta_passo:180];
+lista_thetas = -180:theta_passo:180;
 
-raio = 1;
+raio = .7;
 r = raio
 lista_posx = [];
 lista_posy = [];
@@ -140,7 +140,7 @@ end
 plot(lista_posx,lista_posy);
 
 %% Executa Simulacao
-open_system('projeto_2016/compara_in_out')
+% open_system('projeto_2016/compara_in_out')
 simOut = sim('projeto_2016');
 
 %% Gera grafico resultados
